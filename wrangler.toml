@@ -1,0 +1,6 @@
+name = "book-lending-tracker"
+compatibility_date = "2026-11-13"
+
+[assets]
+directory = "./"
+not_found_handling = "404-page"
