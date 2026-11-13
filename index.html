@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Book Lending Tracker | Frenklin Dedaj</title><link rel="stylesheet" href="styles.css"></head>
+<body><div class="container"><header><div><small>PERSONAL LIBRARY</small><h1>📚 Book Lending Tracker</h1></div><span>Frenklin Dedaj · CEN 3 B</span></header>
+<main><section class="hero"><small>YOUR BOOKS, ORGANIZED</small><h2>Keep track of every book you share.</h2><p>Add a loan, monitor due dates, and mark books as returned—all in one simple place.</p></section>
+<section class="stats" aria-label="Loan summary" aria-live="polite"><article><span>Total loans</span><strong id="total-loans">0</strong></article><article><span>Overdue loans</span><strong id="overdue-loans">0</strong></article><article><span>Returned books</span><strong id="returned-loans">0</strong></article></section>
+<section class="panel"><small>NEW ENTRY</small><h2>Lend a book</h2><form id="loan-form"><div class="fields">
+<label>Book title *<input name="title" placeholder="e.g. The Great Gatsby" maxlength="120" required></label>
+<label>Author *<input name="author" placeholder="e.g. F. Scott Fitzgerald" maxlength="120" required></label>
+<label>Borrower *<input name="borrower" placeholder="e.g. Alex Smith" maxlength="120" required></label>
+<label>Due date *<input name="dueDate" type="date" required></label>
+<label>Genre *<select name="genre" required><option value="">Choose a genre</option><option>Fiction</option><option>Non-fiction</option><option>Mystery</option><option>Fantasy</option><option>Science Fiction</option><option>Romance</option><option>Biography</option><option>History</option><option>Education</option><option>Other</option></select></label>
+</div><div class="form-footer"><p>* All fields are required.</p><button type="submit">+ Add loan</button></div><p id="message" role="status"></p></form></section>
+<section class="panel"><small>YOUR RECORDS</small><div class="listing-head"><h2>Lending history</h2><div class="filters"><label class="sr-only" for="search">Search loans</label><input id="search" type="search" placeholder="Search loans…"><label class="sr-only" for="filter">Filter status</label><select id="filter"><option value="all">All statuses</option><option value="borrowed">Borrowed</option><option value="overdue">Overdue</option><option value="returned">Returned</option></select></div></div>
+<div id="table-wrap" class="table-wrap"><table><thead><tr><th>Title</th><th>Author</th><th>Borrower</th><th>Due date</th><th>Genre</th><th>Status</th><th>Action</th></tr></thead><tbody id="loans-body"></tbody></table></div><div id="empty" class="empty"><h3>📭 No loans to show</h3><p>Add your first book above, or adjust your filters.</p></div></section></main><footer>Made by Frenklin Dedaj · HTML, CSS &amp; JavaScript</footer></div><script type="module" src="app.js"></script></body></html>
